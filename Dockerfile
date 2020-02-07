@@ -3,7 +3,7 @@ FROM node:alpine as builder
 WORKDIR '/app'
 COPY package.json .
 RUN yarn
-COPY . .
+COPY ./ ./
 RUN yarn build
 
 # The second step 
